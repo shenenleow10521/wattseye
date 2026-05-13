@@ -65,6 +65,10 @@ WattsEye works similarly:
 
 ## 7. Three main product pillars
 
+Visual reference:
+
+![WattsEye three-pillar product map](assets/three-pillars-map.svg)
+
 ### Pillar 1 — Appliance-level electricity breakdown
 
 The dashboard shows estimated power usage, cost, timing, and explanation for each appliance.

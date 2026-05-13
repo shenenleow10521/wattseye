@@ -17,6 +17,10 @@ By the end of this file, you should understand:
 
 ## 2. The full system flow
 
+Visual reference:
+
+![WattsEye system connection flow](assets/system-connection-flow.svg)
+
 ```text
 Appliance turns on
 ↓

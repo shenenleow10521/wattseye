@@ -28,6 +28,13 @@ Power sensing -> appliance detection -> occupancy and routine context -> smart i
 
 The dashboard should not only show what is using power. It should also forecast bills, detect waste, learn household routines, recommend actions, and warn about abnormal appliance behavior.
 
+## Visual diagrams
+
+- [System connection flow](assets/system-connection-flow.svg)
+- [Smart insight architecture](assets/smart-insight-architecture.svg)
+- [Live data pipeline](assets/live-data-pipeline.svg)
+- [Three-pillar product map](assets/three-pillars-map.svg)
+
 ## Important note
 
 The files are written for teammate explanation and prototype planning. Hardware involving mains electricity must be checked by a qualified person before powering on.

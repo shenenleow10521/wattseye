@@ -16,6 +16,10 @@ This is one of the most important files because many people understand hardware 
 
 ## 2. The full live data flow
 
+Visual reference:
+
+![WattsEye live data pipeline](assets/live-data-pipeline.svg)
+
 ```text
 CT clamp and voltage sensor
 ↓

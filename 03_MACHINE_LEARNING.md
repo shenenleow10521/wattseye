@@ -274,6 +274,10 @@ In the live system:
 
 ## 18. Routine-aware detection
 
+Visual reference:
+
+![WattsEye smart insight architecture](assets/smart-insight-architecture.svg)
+
 Routine-aware detection means WattsEye learns what is normal for this specific home at different times.
 
 Examples:
