@@ -38,3 +38,19 @@ The dashboard should not only show what is using power. It should also forecast 
 ## Important note
 
 The files are written for teammate explanation and prototype planning. Hardware involving mains electricity must be checked by a qualified person before powering on.
+
+## Frontend dashboard demo
+
+A simple static WattsEye dashboard prototype is available in the `frontend/` folder. It uses dummy data so the frontend can be demonstrated before the backend or live sensor feed is ready.
+
+### Run locally
+
+Option 1: open `frontend/index.html` directly in a browser.
+
+Option 2: serve it with Python from the repository root:
+
+```bash
+python3 -m http.server 8000 -d frontend
+```
+
+Then visit `http://localhost:8000`.
