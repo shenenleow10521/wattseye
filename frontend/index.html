@@ -42,19 +42,30 @@
 
       <main>
         <section class="hero" id="overview">
-          <div>
-            <p class="eyebrow">Live household overview</p>
+          <div class="hero-copy-card">
+            <div class="hero-kicker">
+              <p class="eyebrow">Live household overview</p>
+              <span class="demo-badge">University demo build</span>
+            </div>
             <h2>Understand where your electricity bill is coming from.</h2>
             <p class="hero-copy">
               WattsEye turns one whole-home sensor reading into clear appliance
               insights, estimated costs, and practical saving recommendations
               for a university project demo.
             </p>
+            <div class="hero-actions" aria-label="Demo dashboard metadata">
+              <span>Last synced 2 min ago</span>
+              <span>Tariff: RM0.55/kWh</span>
+              <span>Dummy data only</span>
+            </div>
           </div>
           <div class="hero-panel" aria-label="Current demo status">
             <span class="status-pill">Room detected empty</span>
             <strong>Potential AC waste found</strong>
             <p>Auto-off could save an estimated RM18 this month.</p>
+            <div class="hero-sparkline" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
           </div>
         </section>
 
@@ -94,6 +105,20 @@
               </div>
               <span class="confidence">AI confidence 86%</span>
             </div>
+            <div class="appliance-insights" aria-label="Appliance breakdown summary">
+              <div>
+                <span>Biggest load</span>
+                <strong id="topAppliance">--</strong>
+              </div>
+              <div>
+                <span>Active devices</span>
+                <strong id="activeDevices">--</strong>
+              </div>
+              <div>
+                <span>Hourly cost</span>
+                <strong id="hourlyCost">--</strong>
+              </div>
+            </div>
             <div class="appliance-list" id="applianceList"></div>
           </article>
 
@@ -118,13 +143,23 @@
               </div>
               <span class="status-pill warning">Trending high</span>
             </div>
+            <div class="forecast-hero">
+              <div>
+                <span>Forecast</span>
+                <strong id="forecastBill">--</strong>
+                <p id="forecastSummary">Based on the current demo pattern.</p>
+              </div>
+              <div class="forecast-ring" id="forecastRing" aria-label="Bill forecast percentage">
+                <span id="forecastPercent">--</span>
+              </div>
+            </div>
             <div class="bill-meter" aria-label="Bill forecast progress">
               <div class="bill-meter-fill" id="billMeter"></div>
             </div>
             <div class="forecast-details">
               <div>
                 <span>Projected</span>
-                <strong id="forecastBill">--</strong>
+                <strong id="forecastBillDetail">--</strong>
               </div>
               <div>
                 <span>Normal month</span>
@@ -143,6 +178,7 @@
                 <p class="eyebrow">Alerts & recommendations</p>
                 <h3>What should the user do next?</h3>
               </div>
+              <span class="confidence">3 actions</span>
             </div>
             <div class="alerts-list" id="alertsList"></div>
           </article>
