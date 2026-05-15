@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="WattsEye dashboard demo for monitoring power usage, bill forecasts, appliance breakdown, and recommendations."
+    />
+    <title>WattsEye Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="WattsEye dashboard navigation">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">⚡</div>
+          <div>
+            <p class="eyebrow">WattsEye</p>
+            <h1>Energy Coach</h1>
+          </div>
+        </div>
+
+        <nav class="nav-list" aria-label="Primary">
+          <a class="nav-item active" href="#overview">Overview</a>
+          <a class="nav-item" href="#appliances">Appliances</a>
+          <a class="nav-item" href="#forecast">Bill Forecast</a>
+          <a class="nav-item" href="#alerts">Alerts</a>
+        </nav>
+
+        <div class="demo-card">
+          <span class="live-dot" aria-hidden="true"></span>
+          <div>
+            <strong>Demo mode</strong>
+            <p>
+              Using prepared sample readings until the backend feed is
+              connected.
+            </p>
+          </div>
+        </div>
+      </aside>
+
+      <main>
+        <section class="hero" id="overview">
+          <div>
+            <p class="eyebrow">Live household overview</p>
+            <h2>Understand where your electricity bill is coming from.</h2>
+            <p class="hero-copy">
+              WattsEye turns one whole-home sensor reading into clear appliance
+              insights, estimated costs, and practical saving recommendations
+              for a university project demo.
+            </p>
+          </div>
+          <div class="hero-panel" aria-label="Current demo status">
+            <span class="status-pill">Room detected empty</span>
+            <strong>Potential AC waste found</strong>
+            <p>Auto-off could save an estimated RM18 this month.</p>
+          </div>
+        </section>
+
+        <section class="summary-grid" aria-label="Energy summary cards">
+          <article class="summary-card accent-blue">
+            <span class="card-icon">🔌</span>
+            <p>Current Power Usage</p>
+            <strong id="currentPower">--</strong>
+            <small>Live total measured at main sensor</small>
+          </article>
+          <article class="summary-card accent-green">
+            <span class="card-icon">📅</span>
+            <p>Today Usage</p>
+            <strong id="todayUsage">--</strong>
+            <small id="todayCost">Estimated cost today</small>
+          </article>
+          <article class="summary-card accent-orange">
+            <span class="card-icon">💳</span>
+            <p>Estimated Monthly Bill</p>
+            <strong id="monthlyBill">--</strong>
+            <small id="billDelta">Compared with usual pattern</small>
+          </article>
+          <article class="summary-card accent-purple">
+            <span class="card-icon">🌱</span>
+            <p>Energy Saving Status</p>
+            <strong id="savingStatus">--</strong>
+            <small id="savingScore">Waste score</small>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel appliance-panel" id="appliances">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Appliance usage breakdown</p>
+                <h3>Estimated usage right now</h3>
+              </div>
+              <span class="confidence">AI confidence 86%</span>
+            </div>
+            <div class="appliance-list" id="applianceList"></div>
+          </article>
+
+          <article class="panel chart-panel" aria-label="Recent usage graph">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Last 8 hours</p>
+                <h3>Power trend</h3>
+              </div>
+              <span class="muted">kW</span>
+            </div>
+            <div class="bar-chart" id="usageChart"></div>
+          </article>
+        </section>
+
+        <section class="content-grid bottom-grid">
+          <article class="panel forecast-panel" id="forecast">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Estimated bill prediction</p>
+                <h3>Projected month-end bill</h3>
+              </div>
+              <span class="status-pill warning">Trending high</span>
+            </div>
+            <div class="bill-meter" aria-label="Bill forecast progress">
+              <div class="bill-meter-fill" id="billMeter"></div>
+            </div>
+            <div class="forecast-details">
+              <div>
+                <span>Projected</span>
+                <strong id="forecastBill">--</strong>
+              </div>
+              <div>
+                <span>Normal month</span>
+                <strong id="normalBill">--</strong>
+              </div>
+              <div>
+                <span>Main reason</span>
+                <strong id="billReason">--</strong>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel alerts-panel" id="alerts">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Alerts & recommendations</p>
+                <h3>What should the user do next?</h3>
+              </div>
+            </div>
+            <div class="alerts-list" id="alertsList"></div>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
